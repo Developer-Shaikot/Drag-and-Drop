@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f7f7f7;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.app {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+.lists {
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	width: 100%;
+	overflow-x: scroll;
+}
+
+.lists .list {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	margin: 5px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 8px;
+	transition: all 0.2s linear;
+}
+
+.lists .list .list-item {
+	background-color: #F3F3F3;
+	border-radius: 8px;
+	padding: 15px 20px;
+	text-align: center;
+	margin: 4px 0px;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(4, 69, 4);
+    opacity: 0.7;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(255, 77, 0);
+    opacity: 0.8;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box3 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(83, 2, 80);
+    opacity: 0.7;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box4 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(166, 227, 227);
+    margin: 10px;
+    padding: 5px;
+}
+
+#box5 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(4, 69, 4);
+    opacity: 0.7;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box6 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgb(255, 77, 0);
+    opacity: 0.8;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box7 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background: rgb(83, 2, 80);
+    opacity: 0.7;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box8 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: rgba(255, 170, 0, 0.884);
+    opacity: 0.9;
+    margin: 10px;
+    padding: 5px;
+}
+
+#box9 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #eab9d8;
+    margin: 10px;
+    padding: 5px;
+}
+
