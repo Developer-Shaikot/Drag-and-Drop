@@ -1,6 +1,10 @@
 const list_items = document.querySelectorAll('.list-item');
 const lists = document.querySelectorAll('.list');
 
+const getBgColor = (elem) => {
+	return window.getComputedStyle(elem).backgroundColor;
+}
+
 let draggedItem = null;
 
 for (let i = 0; i < list_items.length; i++) {
@@ -20,13 +24,13 @@ for (let i = 0; i < list_items.length; i++) {
 		}, 0);
 	})
 
-	for (let j = 0; j < lists.length; j ++) {
+	for (let j = 0; j < lists.length; j++) {
 		const list = lists[j];
 
 		list.addEventListener('dragover', function (e) {
 			e.preventDefault();
 		});
-		
+
 		list.addEventListener('dragenter', function (e) {
 			e.preventDefault();
 			this.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
@@ -37,8 +41,16 @@ for (let i = 0; i < list_items.length; i++) {
 		});
 
 		list.addEventListener('drop', function (e) {
-			console.log('drop');
-			this.append(draggedItem);
+			currentBoxColor = getBgColor(draggedItem)
+			currentRowColors = [];
+			this.querySelectorAll('.list-item').forEach((elem) => {
+				currentRowColors.push(getBgColor(elem));
+			});
+			if (currentRowColors.includes(currentBoxColor)) {
+				console.log("Same color box already exists");
+			} else {
+				this.append(draggedItem);
+			}
 			this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
 		});
 	}
